@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-test {
+  background-image: url("../../src/images/test.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
