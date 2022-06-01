@@ -1,14 +1,14 @@
 export const nav = [
   {
-    name: "About",
-    location: "/",
+    name: "Über uns",
+    location: "#uber_uns",
   },
   {
     name: "Werte",
-    location: "/",
+    location: "#werte",
   },
   {
     name: "Kontakt",
-    location: "/",
+    location: "#kontakt",
   },
 ]

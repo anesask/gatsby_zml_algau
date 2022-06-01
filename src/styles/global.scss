@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 .bg-test {
-  background-image: url("../../src/images/test.png");
+  background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(100vh - 88px);
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.frost {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(25px);
+}
+
+.bg-contact{
+  background-image: url("../images/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.leaflet-container{
+  z-index: 0 !important;
 }

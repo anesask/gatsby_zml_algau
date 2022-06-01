@@ -23,16 +23,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        deepBlack: "#000000",
-        deepBlue: "#3BB2E2",
-        black: "#212b36",
-        dark: "#090E34",
-        "dark-700": "#090e34b3",
-        primary: "#00598d",
-        secondary: "#13C296",
-        "body-color": "#637381",
-        warning: "#FBBF24",
-        partners: "#F7F9FA",
+        brandGreen: "#72bb74",
+        brandGreenTwo: "#2a352d",
+        brandBlack: "#2a352d",       
       },
       boxShadow: {
         input: "0px 7px 20px rgba(0, 0, 0, 0.03)",
