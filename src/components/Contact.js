@@ -42,10 +42,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <h5 class="text-lg text-brandGreenTwo font-semibold mb-3">
+                    <h5 class="text-lg text-white md:text-brandGreenTwo font-semibold mb-3">
                       Sie finden unsere Praxis im
                     </h5>
-                    <p class="text-base text-brandGreenTwo">
+                    <p class="text-base text-white md:text-brandGreenTwo">
                       Rathausstraße 9
                       <br /> 87448 Waltenhofen
                     </p>
