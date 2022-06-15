@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from "react"
-import {Link} from 'gatsby'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import React, { useState, useEffect, useRef } from "react"
+import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 // Logo
 import Logo from "../../images/Frame.png"
 import { MdPhone } from "react-icons/md"
 // Import Dynamic Data from JSON
 import { nav } from "../../data/nav"
-
+// Hooks
+import useOnClickOutside from "../../hooks/useOnClickOutside"
+import { useWindowSize } from "../../hooks/useWindowSize"
 const Navbar = () => {
   // Local States
   const [scroll, setScroll] = useState()
   const [navActive, setNavActive] = useState(false)
+  const size = useWindowSize()
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -21,6 +24,11 @@ const Navbar = () => {
     })
   })
 
+  // Local Refs
+  const navRef = useRef()
+  // Close Navbar on Click Outside
+  useOnClickOutside(navRef, () => setNavActive(false))
+
   return (
     <div
       className={
@@ -30,10 +38,19 @@ const Navbar = () => {
       }
     >
       <div className="container py-4 lg:py-2">
-        <div className="flex items-center align-center justify-between relative">
-          <div className="px-4 w-40 max-w-full">
-            <Link to="/" class="navbar-logo w-full block">
-              <img src={Logo} alt="logo" className="w-full header-logo" />
+        <div
+          className="flex items-center align-center justify-between relative"
+          ref={navRef}
+        >
+          <div className="h-auto w-100 max-w-full">
+            <Link to="/">
+              {size.width > 760 ? (
+                <img src={Logo} alt="logo" className="w-100 h-auto" />
+              ) : (              
+                <h1 className="text-md font-semibold leading-5 text-brandGreen">
+                  Manuelle Therapien <span className="text-brandGreenTwo whitespace-pre-line">Ludwig Bromberger</span>
+                </h1>
+              )}
             </Link>
           </div>
           <div className="flex justify-end items-center w-full">
@@ -68,9 +85,12 @@ const Navbar = () => {
                   <li className="relative group">
                     <Link
                       to="/"
+                      onClick={() => {
+                        setNavActive(!navActive)
+                      }}
                       activeClassName="active"
                       className="                      
-                      text-base
+                      text-lg
                       lg:text-primary
                       lg:group-hover:text-brandGreen
                       group-hover:text-brandGreen    
@@ -88,9 +108,12 @@ const Navbar = () => {
                   {nav.map(i => (
                     <li className="relative group">
                       <AnchorLink
-                        to={i.location}
+                        to={"/" + i.location}
+                        onAnchorLinkClick={() => {
+                          setNavActive(!navActive)
+                        }}
                         className="                      
-                      text-base
+                      text-lg
                       lg:text-primary                      
                       lg:group-hover:text-brandGreen
                       group-hover:text-brandGreen                      

@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+
 const Content = () => {
   return (
     <section id="uber_uns">
@@ -34,10 +35,7 @@ const Content = () => {
             data-sal-duration="1000"
             data-sal-easing="ease"
           >
-            {/* <span class="mb-8 text-xs font-bold tracking-widest text-blue-600 uppercase">
-              {" "}
-              Your tagline{" "}
-            </span> */}
+           
             <h3 class="mb-8 text-4xl font-bold leading-none tracking-tighter text-brandGreen md:text-7xl lg:text-5xl">
               Bei uns sind Sie in guten Händen
             </h3>
@@ -46,6 +44,7 @@ const Content = () => {
               Massage, Gesichtsbehandlung oder Fußpflege, unser kompetentes Team
               ist für Sie und Ihre Gesundheit da.
             </p>
+           
           </div>
         </div>
       </div>

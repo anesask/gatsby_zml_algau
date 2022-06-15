@@ -2,8 +2,8 @@ import React from "react"
 
 const Header = () => {
   return (
-    <section className="bg-test">
-      <div className="flex flex-col w-full h-full items-center justify-center text-center ">
+    <section className="bg-test z-20">
+      <div className="flex flex-col w-full h-full items-center justify-center text-center">
         <div className="border-y-2 border-white py-8">
           <h1 className="text-white font-bold tracking-tighter text-6xl shadow-md ">
             ZML Algäu
