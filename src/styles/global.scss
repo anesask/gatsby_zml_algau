@@ -1,22 +1,19 @@
-
-@import './info_circle/styles.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import './navToggler.scss';
-
+@import "./navToggler.scss";
 
 .bg-test {
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(100vh - 88px);
+  height: calc(100vh);
 }
-html{
+html {
   text-rendering: optimizeSpeed;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -27,12 +24,12 @@ body{
   backdrop-filter: blur(25px);
 }
 
-.bg-contact{
+.bg-contact {
   background-image: url("../images/contact.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.leaflet-container{
+.leaflet-container {
   z-index: 0 !important;
 }

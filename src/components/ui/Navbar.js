@@ -45,10 +45,13 @@ const Navbar = () => {
           <div className="h-auto w-100 max-w-full">
             <Link to="/">
               {size.width > 760 ? (
-                <img src={Logo} alt="logo" className="w-100 h-auto" />
-              ) : (              
+                <img src={Logo} alt="logo" className="w-100 h-auto scale-110" />
+              ) : (
                 <h1 className="text-md font-semibold leading-5 text-brandGreen">
-                  Manuelle Therapien <span className="text-brandGreenTwo whitespace-pre-line">Ludwig Bromberger</span>
+                  Manuelle Therapien{" "}
+                  <span className="text-brandGreenTwo whitespace-pre-line">
+                    Ludwig Bromberger
+                  </span>
                 </h1>
               )}
             </Link>

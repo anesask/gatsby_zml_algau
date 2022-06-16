@@ -3,7 +3,7 @@
 export const info = [
   {
     id: 0,
-    icon: '../images/test.png',
+    icon: '',
     title: "Bei uns steht der Patient im Mittelpunkt",
     subtitle: "",
   },
