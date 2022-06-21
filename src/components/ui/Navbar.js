@@ -33,8 +33,8 @@ const Navbar = () => {
     <div
       className={
         scroll
-          ? "bg-white inset-0 z-50 w-full flex items-center sticky transition-shadow duration-300 h-22"
-          : "frost inset-0 left-0 z-50 w-full flex items-center sticky shadow-md transition-shadow duration-500 h-22"
+          ? "transparent text-brandGreenTwo md:text-white top-0 left-0 z-50 w-full flex items-center sticky transition-shadow duration-800 h-[88px] -mb-[88px]"
+          : "bg-white top-0 left-0 z-50 w-full flex items-center sticky shadow-md transition-all duration-800 h-[88px]"
       }
     >
       <div className="container py-4 lg:py-2">
@@ -74,13 +74,13 @@ const Navbar = () => {
                 py-[6px]
                 rounded-lg ${navActive ? "navbarTogglerActive" : ""}`}
               >
-                <span className="relative w-[30px] h-[2px] my-[6px] block bg-brandGreenTwo"></span>
-                <span className="relative w-[30px] h-[2px] my-[6px] block bg-brandGreenTwo"></span>
-                <span className="relative w-[30px] h-[2px] my-[6px] block bg-brandGreenTwo"></span>
+                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
+                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
+                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
               </button>
               <nav
                 id="navbarCollapse"
-                className={`absolute py-5 lg:py-0 lg:px-4 xl:px-6 bg-white lg:bg-transparent shadow-lg rounded-lg max-w-full w-full lg:max-w-full lg:w-full left-0 top-full lg:block lg:static lg:shadow-none ${
+                className={`absolute mt-2 py-5 lg:py-0 lg:px-4 xl:px-6 bg-white lg:bg-transparent shadow-lg rounded-lg max-w-full w-full lg:max-w-full lg:w-full left-0 top-full lg:block lg:static lg:shadow-none ${
                   navActive ? "" : "hidden"
                 }`}
               >
@@ -117,7 +117,7 @@ const Navbar = () => {
                         }}
                         className="                      
                       text-lg
-                      lg:text-primary                      
+                      text-primary                                        
                       lg:group-hover:text-brandGreen
                       group-hover:text-brandGreen                      
                       py-2
