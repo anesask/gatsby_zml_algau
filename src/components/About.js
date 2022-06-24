@@ -1,85 +1,83 @@
-import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
+import { headingOne, headingTwo, baseText } from "../utils/typography"
+import { StaticImage } from "gatsby-plugin-image"
+import { Parallax } from "react-scroll-parallax"
+// About Images
+import imageOne from "../images/about/about_one.jpg"
+import imageTwo from "../images/about/about_two.jpg"
+import imageThree from "../images/about/about_three.jpg"
 
 const About = () => {
   return (
-    <section className="pt-20 lg:pt-[120px] pb-20 lg:pb-[120px] bg-[#f3f4fe] max-h-1/2">
-      <div className="container">
-        <div className="bg-white wow fadeInUp">
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full px-4">
-              <div
-                className="
-                  lg:flex
-                  items-center
-                  justify-between
-                  border
-                  overflow-hidden
-                "
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="grid gap-10 lg:grid-cols-2">
+        <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
+            <StaticImage
+              src="../images/icons/about_icon.png"
+              placeholder="tracedSvg"
+            />
+          </div>
+          <div className="max-w-xl mb-6">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              Was ist
+              <br className="block" />
+              <span className={headingOne}>Manuelle Lymphdrainage?</span>
+            </h2>
+            <p className={baseText}>
+              Neben dem Blutkreislauf gibt es noch ein weiteres Transportsystem:
+              das Lymphgefäßsystem. Hier werden in erster Linie End- und
+              Abfallprodukte des Stoffwechsels transportiert. Nach größeren
+              Operationen und Verletzungen fallen viele solcher lymphpflichtigen
+              Substanzen an.
+            </p>
+          </div>
+          <div>
+            <a
+              href="/"
+              aria-label=""
+              className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+            >
+              Learn more
+              <svg
+                className="inline-block w-3 ml-2"
+                fill="currentColor"
+                viewBox="0 0 12 12"
               >
-                <div
-                  className="
-                    lg:max-w-[565px]
-                    xl:max-w-[640px]
-                    w-full
-                    py-12
-                    px-7
-                    sm:px-12
-                    md:p-16
-                    lg:py-9 lg:px-16
-                    xl:p-[70px]
-                  "
-                >
-                  <span class="font-semibold text-lg text-primary mb-2 block">
-                    Was ist Manuelle Lymphdrainage?
-                  </span>
-                  <h3 class="mb-8 text-4xl font-bold leading-none tracking-tighter text-brandGreen md:text-7xl lg:text-5xl">
-                    Manuelle Lymphdrainage
-                  </h3>
-                  <p class="text-base text-body-color mb-9 leading-relaxed">
-                    Neben dem Blutkreislauf gibt es noch ein weiteres
-                    Transportsystem: das Lymphgefäßsystem. Hier werden in erster
-                    Linie End- und Abfallprodukte des Stoffwechsels
-                    transportiert. Nach größeren Operationen und Verletzungen
-                    fallen viele solcher lymphpflichtigen Substanzen an.
-                  </p>
-
-                  <p class="text-base text-gray-500 text-left leading-relaxed">
-                    Die manuelle Lymphdrainage ist eine Therapieform der
-                    physikalischen Anwendungen; ihre Wirkungsweise ist breit
-                    gefächert. So dient sie unter anderem als Ödem- und
-                    Entstauungstherapie geschwollener Körperregionen, wie
-                    Körperstamm und Extremitäten (Arme und Beine), welche nach
-                    Unterleibs- und/oder Brustkrebsoperationen entstehen können.
-                    Durch kreisförmige Verschiebetechniken, welche mit leichtem
-                    Druck angewandt werden, soll Flüssigkeit aus dem Gewebe in
-                    das Lymphgefäßsystem verschoben werden. Die manuelle
-                    Lymphdrainage wirkt sich überwiegend auf den Haut- und
-                    Unterhautbereich aus und soll keine Mehrdurchblutung, wie in
-                    der klassischen Massage, bewirken. Weitere Indikationen sind
-                    sämtliche orthopädischen und traumatologischen Erkrankungen,
-                    die mit einer Schwellung einhergehen (Verrenkungen,
-                    Zerrungen, Verstauchungen, Muskelfaserrisse etc.). Auch bei
-                    Verbrennungen, Schleudertrauma, Morbus Sudeck und ähnlichen
-                    Krankheitsbildern wird die Manuellen Lymphdrainage
-                    angewendet.
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="flex justify-center align-center mx-auto px-4 py-4">
-                    <StaticImage
-                      width={550}
-                      src="../images/about-image.png"
-                      className="mx-auto lg:ml-auto rounded-lg shadow-2xl mb-10"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+                <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div className="flex items-center justify-center -mx-4 lg:pl-8">
+          <div className="flex flex-col items-end px-3">
+            <Parallax speed={0} translateX={[10, 0]}>
+              <img
+                className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                src={imageOne}
+                alt=""
+              />
+            </Parallax>
+            <Parallax speed={5} scale={[0.7, 1]}>
+              <img
+                className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+                src={imageTwo}
+                alt=""
+              />
+            </Parallax>
+          </div>
+          <div className="px-3">
+            <Parallax speed={10} translateY={[10, 0]}>
+              <img
+                className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+                src={imageThree}
+                alt=""
+              />
+            </Parallax>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

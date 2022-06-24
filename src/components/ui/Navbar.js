@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 // Logo
-import Logo from "../../images/Frame.png"
+import Logo from "../../images/new_logo.png"
+import LogoWhite from "../../images/new_logo_white.png"
 import { MdPhone } from "react-icons/md"
 // Import Dynamic Data from JSON
 import { nav } from "../../data/nav"
@@ -33,8 +34,8 @@ const Navbar = () => {
     <div
       className={
         scroll
-          ? "transparent text-brandGreenTwo md:text-white top-0 left-0 z-50 w-full flex items-center sticky transition-shadow duration-800 h-[88px] -mb-[88px]"
-          : "bg-white top-0 left-0 z-50 w-full flex items-center sticky shadow-md transition-all duration-800 h-[88px]"
+          ? "transparent text-brandGreenTwo md:text-white top-0 left-0 z-50 w-full flex items-center  transition-all duration-500 h-[88px] -mb-[88px]"
+          : "bg-white top-0 left-0 z-50 w-full flex items-center fixed shadow-md transition-all duration-500 h-[88px]"
       }
     >
       <div className="container py-4 lg:py-2">
@@ -44,15 +45,10 @@ const Navbar = () => {
         >
           <div className="h-auto w-100 max-w-full">
             <Link to="/">
-              {size.width > 760 ? (
-                <img src={Logo} alt="logo" className="w-100 h-auto scale-110" />
+              {size.width > 760 && scroll ? (
+                <img src={LogoWhite} alt="logo" className="w-48 h-auto" />
               ) : (
-                <h1 className="text-md font-semibold leading-5 text-brandGreen">
-                  Manuelle Therapien{" "}
-                  <span className="text-brandGreenTwo whitespace-pre-line">
-                    Ludwig Bromberger
-                  </span>
-                </h1>
+                <img src={Logo} alt="logo" className="w-48 h-auto" />
               )}
             </Link>
           </div>
@@ -74,9 +70,21 @@ const Navbar = () => {
                 py-[6px]
                 rounded-lg ${navActive ? "navbarTogglerActive" : ""}`}
               >
-                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
-                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
-                <span className={`relative w-[30px] h-[2px] my-[6px] block ${scroll ? "bg-white" : "bg-brandGreenTwo"}`}></span>
+                <span
+                  className={`relative w-[30px] h-[2px] my-[6px] block ${
+                    scroll ? "bg-white" : "bg-brandGreenTwo"
+                  }`}
+                ></span>
+                <span
+                  className={`relative w-[30px] h-[2px] my-[6px] block ${
+                    scroll ? "bg-white" : "bg-brandGreenTwo"
+                  }`}
+                ></span>
+                <span
+                  className={`relative w-[30px] h-[2px] my-[6px] block ${
+                    scroll ? "bg-white" : "bg-brandGreenTwo"
+                  }`}
+                ></span>
               </button>
               <nav
                 id="navbarCollapse"

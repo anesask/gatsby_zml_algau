@@ -2,7 +2,7 @@ import React from "react"
 
 const Testimonials = () => {
   return (
-    <section id="werte" class="pt-20 md:pt-[120px]">
+    <section id="werte" className="pt-20 md:pt-[120px]">
       <div class="container px-4">
         <div class="flex flex-wrap">
           <div class="w-full mx-4">
@@ -30,23 +30,23 @@ const Testimonials = () => {
         </div>
 
         <div className="flex flex-wrap h-full mb-5">
-          <div className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2" data-sal="fade"
-              data-sal-delay="200"
-              data-sal-duration="1500"
-              data-sal-easing="ease">
+          <div
+            className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
+            data-sal="fade"
+            data-sal-delay="200"
+            data-sal-duration="1500"
+            data-sal-easing="ease"
+          >
             <div
               class="
-                ud-single-testimonial
+               border-2
+               border-black
                 p-8
-                bg-white
+                bg-white                
                 
-                shadow-testimonial
-                h-full     
-              "
-              data-wow-delay=".1s
               "
             >
-              <div class="ud-testimonial-ratings flex items-center mb-3">
+              <div class="px-2 py-4  flex items-center mb-3">
                 <span class="text-[#fbb040] mr-1">
                   <svg
                     width="18"
@@ -114,10 +114,13 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2" data-sal="fade"
-              data-sal-delay="400"
-              data-sal-duration="1500"
-              data-sal-easing="ease">
+          <div
+            className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
+            data-sal="fade"
+            data-sal-delay="400"
+            data-sal-duration="1500"
+            data-sal-easing="ease"
+          >
             <div
               class="
                 ud-single-testimonial
@@ -131,7 +134,7 @@ const Testimonials = () => {
               data-wow-delay=".15s
               "
             >
-              <div class="ud-testimonial-ratings flex items-center mb-3">
+              <div class="px-2 py-4  flex items-center mb-3">
                 <span class="text-[#fbb040] mr-1">
                   <svg
                     width="18"
@@ -197,10 +200,13 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div class="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2" data-sal="fade"
-              data-sal-delay="600"
-              data-sal-duration="1500"
-              data-sal-easing="ease">
+          <div
+            class="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
+            data-sal="fade"
+            data-sal-delay="600"
+            data-sal-duration="1500"
+            data-sal-easing="ease"
+          >
             <div
               class="
                 ud-single-testimonial
@@ -213,7 +219,7 @@ const Testimonials = () => {
               data-wow-delay=".2s
               "
             >
-              <div className="ud-testimonial-ratings flex items-center mb-3">
+              <div className="px-2 py-4 flex items-center mb-3">
                 <span className="text-[#fbb040] mr-1">
                   <svg
                     width="18"

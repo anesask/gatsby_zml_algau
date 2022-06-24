@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout"
 const impressum = () => {
   return (
     <Layout>
-      <section className="px-4 py-12 mx-auto max-w-7xl min-h-full">
+      <section className="px-4 py-24 mx-auto max-w-7xl min-h-full">
         <div className="container">
           <div className="flex flex-wrap">
             <div className="w-full px-4">
