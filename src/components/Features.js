@@ -8,13 +8,13 @@ import {
 const Features = () => {
   return (
     <section>
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24 min-h-full ">
-        <div className="container">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-22 min-h-full ">
+  
           <div className="flex flex-wrap">
-            <div className="w-full px-4">
+            <div className="w-full">
               <div className="mb-12 lg:mb-20 max-w-[620px]">
-                <h3 class="mb-8 text-4xl font-bold leading-none tracking-tighter text-brandGreen md:text-7xl lg:text-5xl">
-                  Eine wirkungsvolle Behandlung
+                <h3 className="mb-8 text-4xl font-bold leading-none tracking-tighter text-brandGreen md:text-7xl lg:text-5xl">
+                 <span className="text-gray-900"> Eine wirkungsvolle</span> Behandlung
                 </h3>
                 <p
                   className="
@@ -33,7 +33,7 @@ const Features = () => {
           </div>
           <div className="flex flex-wrap">
             <div
-              className="w-full md:w-1/2 lg:w-1/4 px-4"
+              className="w-full md:w-1/2 lg:w-1/4 text-center md:text-left"
               data-sal="fade"
               data-sal-delay="200"
               data-sal-duration="2000"
@@ -49,6 +49,8 @@ const Features = () => {
               justify-center
               bg-primary
               rounded-2xl
+              mx-auto
+              md:mx-0
               mb-8
               relative
               z-10
@@ -84,7 +86,7 @@ const Features = () => {
               </div>
             </div>
             <div
-              className="w-full md:w-1/2 lg:w-1/4 px-4"
+              className="w-full md:w-1/2 lg:w-1/4 px-4 text-center md:text-left"
               data-sal="fade"
               data-sal-delay="200"
               data-sal-duration="2000"
@@ -100,6 +102,8 @@ const Features = () => {
               justify-center
               bg-primary
               rounded-2xl
+              mx-auto
+              md:mx-0
               mb-8
               relative
               z-10
@@ -135,7 +139,7 @@ const Features = () => {
               </div>
             </div>
             <div
-              className="w-full md:w-1/2 lg:w-1/4 px-4"
+              className="w-full md:w-1/2 lg:w-1/4 px-4 text-center md:text-left"
               data-sal="fade"
               data-sal-delay="400"
               data-sal-duration="2000"
@@ -151,6 +155,8 @@ const Features = () => {
               justify-center
               bg-primary
               rounded-2xl
+              mx-auto
+              md:mx-0
               mb-8
               relative
               z-10
@@ -187,7 +193,7 @@ const Features = () => {
               </div>
             </div>
             <div
-              className="w-full md:w-1/2 lg:w-1/4 px-4"
+              className="w-full md:w-1/2 lg:w-1/4 px-4 text-center md:text-left"
               data-sal="fade"
               data-sal-delay="600"
               data-sal-duration="2000"
@@ -203,6 +209,8 @@ const Features = () => {
               justify-center
               bg-primary
               rounded-2xl
+              mx-auto
+              md:mx-0
               mb-8
               relative
               z-10
@@ -239,7 +247,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div>
+  
     </section>
   )
 }

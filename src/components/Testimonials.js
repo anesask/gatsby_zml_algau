@@ -1,27 +1,16 @@
 import React from "react"
+import { headingOne, baseText } from "../utils/typography"
+import { testimonials } from "../data/testimonials"
 
 const Testimonials = () => {
   return (
-    <section id="werte" className="pt-20 md:pt-[120px]">
-      <div class="container px-4">
-        <div class="flex flex-wrap">
-          <div class="w-full mx-4">
-            <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
-              <span class="font-semibold text-lg text-primary mb-2 block">
-                Bewertungen
-              </span>
-              <h3 class="mb-8 text-4xl font-bold leading-none tracking-tighter text-brandGreen md:text-7xl lg:text-5xl">
-                Das Sagen unsere Kunden
-              </h3>
-              <p
-                class="
-                  text-lg
-                  sm:text-xl
-                  leading-relaxed
-                  sm:leading-relaxed
-                  text-body-color
-                "
-              >
+    <section id="werte" className="pt-6 md:pt-20">
+      <div className="container px-4 pt-2">
+        <div className="flex flex-wrap">
+          <div className="w-full mx-4">
+            <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
+              <h3 className={headingOne}>Das Sagen unsere Kunden</h3>
+              <p className={baseText}>
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
               </p>
@@ -29,258 +18,72 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap h-full mb-5">
-          <div
-            className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
-            data-sal="fade"
-            data-sal-delay="200"
-            data-sal-duration="1500"
-            data-sal-easing="ease"
-          >
-            <div
-              class="
-               border-2
-               border-black
-                p-8
-                bg-white                
-                
-              "
-            >
-              <div class="px-2 py-4  flex items-center mb-3">
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-              </div>
-              <div class="ud-testimonial-content mb-6">
-                <p class="text-base tracking-wide text-body-color">
-                  "Ich kann die Praxis nur empfehlen.
-                  <br />
-                  Kurze bis gar keine Wartezeiten, schnelle Terminvergabe,
-                  nettes Empfangspersonal, freundliche und kompetente
-                  Therapeuten und super schön eingerichtet."
-                </p>
-              </div>
-              <div class="ud-testimonial-info flex items-center">
-                <div class="ud-testimonial-meta">
-                  <h4 class="text-sm font-semibold">Lisa Kohler</h4>
+        <div className="flex flex-wrap pb-5">
+          {testimonials.map(i => (
+            <div className="w-full md:w-1/2 xl:w-1/3 px-4">
+              <div className=" overflow-hidden">
+                {/* Stars */}
+                <div className="flex justify-center">
+                  <span class="text-[#fbb040] mr-1">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 18 16"
+                      class="fill-current"
+                    >
+                      <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
+                    </svg>
+                  </span>
+                  <span class="text-[#fbb040] mr-1">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 18 16"
+                      class="fill-current"
+                    >
+                      <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
+                    </svg>
+                  </span>
+                  <span class="text-[#fbb040] mr-1">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 18 16"
+                      class="fill-current"
+                    >
+                      <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
+                    </svg>
+                  </span>
+                  <span class="text-[#fbb040] mr-1">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 18 16"
+                      class="fill-current"
+                    >
+                      <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
+                    </svg>
+                  </span>
+                  <span class="text-[#fbb040] mr-1">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 18 16"
+                      class="fill-current"
+                    >
+                      <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
+                    </svg>
+                  </span>
+                </div>
+                <div className="p-4 sm:p-9 md:p-7 xl:p-9 flex flex-col justify-center align-center text-center">
+                  <p className="text-base italic tracking-wide text-body-color">
+                    {i.text}
+                  </p>
+                  <h4 className="text-sm font-semibold mt-5">{i.name}</h4>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
-            data-sal="fade"
-            data-sal-delay="400"
-            data-sal-duration="1500"
-            data-sal-easing="ease"
-          >
-            <div
-              class="
-                ud-single-testimonial
-                p-8
-                bg-white
-                
-                shadow-testimonial
-                h-full
-                
-              "
-              data-wow-delay=".15s
-              "
-            >
-              <div class="px-2 py-4  flex items-center mb-3">
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-              </div>
-              <div class="ud-testimonial-content mb-6">
-                <p class="text-base tracking-wide text-body-color">
-                  "Die Therapeuten*innen sind alle sehr freundlich und die
-                  Terminfindung klappt jedes Mal sehr schnell. Man fühlt sich in
-                  guten Händen und ebenso gut beraten!"
-                </p>
-              </div>
-              <div class="ud-testimonial-info flex items-center">
-                <div class="ud-testimonial-meta">
-                  <h4 class="text-sm font-semibold">Franziska Gesmu</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full md:w-1/2 lg:w-1/3 px-4 min-h-1/2"
-            data-sal="fade"
-            data-sal-delay="600"
-            data-sal-duration="1500"
-            data-sal-easing="ease"
-          >
-            <div
-              class="
-                ud-single-testimonial
-                p-8
-                bg-white
-               
-                shadow-testimonial
-                h-full
-              "
-              data-wow-delay=".2s
-              "
-            >
-              <div className="px-2 py-4 flex items-center mb-3">
-                <span className="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span className="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span className="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-                <span class="text-[#fbb040] mr-1">
-                  <svg
-                    width="18"
-                    height="16"
-                    viewBox="0 0 18 16"
-                    class="fill-current"
-                  >
-                    <path d="M9.09815 0.360596L11.1054 6.06493H17.601L12.3459 9.5904L14.3532 15.2947L9.09815 11.7693L3.84309 15.2947L5.85035 9.5904L0.595291 6.06493H7.0909L9.09815 0.360596Z" />
-                  </svg>
-                </span>
-              </div>
-              <div class="ud-testimonial-content mb-6">
-                <p class="text-base tracking-wide text-body-color">
-                  "Sehr gute Physiotherapeuten und gute Athmosphäre."
-                </p>
-              </div>
-              <div class="ud-testimonial-info flex items-center">
-                <h4 class=" text-sm font-semibold">Victor Ederhof</h4>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

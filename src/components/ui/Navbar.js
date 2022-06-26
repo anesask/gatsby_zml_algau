@@ -34,8 +34,8 @@ const Navbar = () => {
     <div
       className={
         scroll
-          ? "transparent text-brandGreenTwo md:text-white top-0 left-0 z-50 w-full flex items-center  transition-all duration-500 h-[88px] -mb-[88px]"
-          : "bg-white top-0 left-0 z-50 w-full flex items-center fixed shadow-md transition-all duration-500 h-[88px]"
+          ? "hidden text-brandGreenTwo md:text-white top-0 left-0 z-50 w-full flex items-center transition-all duration-500 h-[88px]"
+          : "bg-white top-0 left-0 z-50 w-full flex items-center fixed shadow-md transition-all duration-700 h-[88px]"
       }
     >
       <div className="container py-4 lg:py-2">
@@ -43,10 +43,11 @@ const Navbar = () => {
           className="flex items-center align-center justify-between relative"
           ref={navRef}
         >
+          {/* Logic when you need another logo on scroll and mobile size */}
           <div className="h-auto w-100 max-w-full">
             <Link to="/">
               {size.width > 760 && scroll ? (
-                <img src={LogoWhite} alt="logo" className="w-48 h-auto" />
+                <img src={Logo} alt="logo" className="w-48 h-auto" />
               ) : (
                 <img src={Logo} alt="logo" className="w-48 h-auto" />
               )}

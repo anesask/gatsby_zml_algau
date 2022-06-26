@@ -9,7 +9,8 @@ import imageThree from "../images/about/about_three.jpg"
 
 const About = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-18 min-h-full">
+      <div className="container">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
@@ -51,7 +52,7 @@ const About = () => {
         </div>
         <div className="flex items-center justify-center -mx-4 lg:pl-8">
           <div className="flex flex-col items-end px-3">
-            <Parallax speed={0} translateX={[10, 0]}>
+            <Parallax speed={0} translateX={[15, 0]}>
               <img
                 className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
                 src={imageOne}
@@ -67,7 +68,7 @@ const About = () => {
             </Parallax>
           </div>
           <div className="px-3">
-            <Parallax speed={10} translateY={[10, 0]}>
+            <Parallax speed={10} translateY={[20, 0]}>
               <img
                 className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
                 src={imageThree}
@@ -76,6 +77,7 @@ const About = () => {
             </Parallax>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

@@ -25,6 +25,9 @@ const Footer = () => {
               <Link to="/datenschutz" className="text-md font-normal hover:text-white text-brandGreen cursor-pointer">
                 Datenschutz
               </Link>
+              <Link to="/" className="text-md font-normal hover:text-brandGreen text-white cursor-pointer mt-5">
+              &#8593; Zurück nach oben
+              </Link>
             </div>
           </div>
 

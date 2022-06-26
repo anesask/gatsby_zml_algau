@@ -3,9 +3,9 @@ import { MdLocationPin } from "react-icons/md"
 
 const Contact = () => {
   return (
-    <section id="kontakt" class="py-20 md:pt-[120px] relative">
+    <section id="kontakt" className="py-20 md:pt-[120px] relative">
       <div
-        class="
+        className="
       absolute
       z-[-1]
       w-full
@@ -18,23 +18,20 @@ const Contact = () => {
       left-0
     "
       ></div>
-      <div class="container px-4">
-        <div class="flex flex-wrap items-center -mx-4">
-          <div class="px-4 w-full lg:w-7/12 xl:w-8/12">
-            <div class="ud-contact-content-wrapper">
-              <div class="ud-contact-title mb-12 lg:mb-[150px]">
-                <span class="text-white font-semibold text-base mb-5">
-                  Kontakt
-                </span>
-                <h2 class="text-[35px] text-white font-semibold">
+      <div className="container px-4">
+        <div className="flex flex-wrap items-center -mx-4">
+          <div className="px-4 w-full lg:w-7/12 xl:w-8/12">
+            <div className="ud-contact-content-wrapper">
+              <div className="ud-contact-title mb-12 lg:mb-[150px]">
+                <h2 className="text-[35px] text-white font-semibold">
                   Sie haben Fragen, Wünsche oder Anregungen?
                   <br />
                   Wir helfen Ihnen gerne!
                 </h2>
               </div>
-              <div class="flex flex-wrap justify-between mb-12 lg:mb-0">
-                <div class="flex max-w-full w-[330px] mb-8">
-                  <div class="text-[32px] text-primary mr-6">
+              <div className="flex flex-wrap justify-between mb-12 lg:mb-0">
+                <div className="flex max-w-full w-[330px] mb-8">
+                  <div className="text-[32px] text-primary mr-6">
                     <MdLocationPin
                       size={40}
                       color="#72bb74"
@@ -42,10 +39,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <h5 class="text-lg text-white md:text-brandGreenTwo font-semibold mb-3">
+                    <h5 className="text-lg text-white md:text-brandGreenTwo font-semibold mb-3">
                       Sie finden unsere Praxis im
                     </h5>
-                    <p class="text-base text-white md:text-brandGreenTwo">
+                    <p className="text-base text-white md:text-brandGreenTwo">
                       Rathausstraße 9
                       <br /> 87448 Waltenhofen
                     </p>
@@ -54,9 +51,9 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div class="px-4 w-full lg:w-5/12 xl:w-4/12">
+          <div className="px-4 w-full lg:w-5/12 xl:w-4/12">
             <div
-              class="
+              className="
           border-2
           border-brandGreen
             rounded-lg
@@ -68,25 +65,22 @@ const Contact = () => {
             2xl:p-[60px]
             sm:py-12 sm:px-10
             lg:py-12 lg:px-10
-            wow
-            fadeInUp
-          "
-              data-wow-delay=".2s
+         
           "
             >
-              <h3 class="text-brandGreenTwo font-semibold mb-8 text-2xl md:text-[26px]">
+              <h3 className="text-brandGreenTwo font-semibold mb-8 text-2xl md:text-[26px]">
                 Kontaktieren Sie uns
               </h3>
               <form>
-                <div class="mb-6">
-                  <label for="fullName" class="block text-xs text-dark">
+                <div className="mb-6">
+                  <label for="fullName" className="block text-xs text-dark">
                     Name*
                   </label>
                   <input
                     type="text"
                     name="fullName"
                     placeholder="Max Mustermann"
-                    class="
+                    className="
                   w-full
                   border-0 border-b border-[#f1f1f1]
                   focus:border-primary focus:outline-none
@@ -94,7 +88,7 @@ const Contact = () => {
                 "
                   />
                 </div>
-                <div class="mb-6">
+                <div className="mb-6">
                   <label for="email" class="block text-xs text-dark">
                     Email*
                   </label>
@@ -102,7 +96,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     placeholder="max@musterman.de"
-                    class="
+                    className="
                   w-full
                   border-0 border-b border-[#f1f1f1]
                   focus:border-primary focus:outline-none
@@ -111,7 +105,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <div class="mb-6">
+                <div className="mb-6">
                   <label for="message" class="block text-xs text-dark">
                     Nachricht*
                   </label>
@@ -119,7 +113,7 @@ const Contact = () => {
                     name="message"
                     rows="1"
                     placeholder="Ihre Nachricht"
-                    class="
+                    className="
                   w-full
                   border-0 border-b border-[#f1f1f1]
                   focus:border-primary focus:outline-none
@@ -128,10 +122,10 @@ const Contact = () => {
                 "
                   ></textarea>
                 </div>
-                <div class="mb-0">
+                <div className="mb-0">
                   <button
                     type="submit"
-                    class="
+                    className="
                   inline-flex
                   items-center
                   justify-center
