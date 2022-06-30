@@ -49,14 +49,14 @@ const Faq = () => {
       <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div className="flex flex-col mb-16 sm:text-center">
           <a href="/" class="mb-6 sm:mx-auto">
-            <div class="flex items-center justify-center w-12 h-12 rounded-full">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full mx-auto md:mx-0">
               <StaticImage
                 src="../images/icons/faq_icon.png"
                 placeholder="tracedSVG"
               />
             </div>
           </a>
-          <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+          <div class="max-w-xl md:mx-auto text-center md:text-left lg:max-w-2xl">
             <h2 class={headingOne}>Häufig gestellte Fragen</h2>
             <p class={baseText}>
               Die häufigsten Fragen, die uns dabei begegnet sind und wie Sie
